@@ -6,16 +6,18 @@
 /* @media screen and (min-width:769px) and ( max-width:1025px) {} */
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 html{
-	color: ;
-	font-size:;
+	color: #fff;
+	background: #000;
+	font-size: 16px;
 	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
 	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
-	line-height: ;
+	font-family: san-serif;
+	line-height: 1.8;
 }
 a{
-	color: ;
+	color: #fff;
 	display: block;
 }
 #wrapper{
@@ -23,6 +25,7 @@ a{
 	max-width: 1920px;
 	margin: 0 auto;
 	height: auto;
+	overflow: hidden;
 }
 section,
 .section{
@@ -31,17 +34,23 @@ section,
 	position: relative;
 }
 .container{
+	max-width: 1280px;
 	width: 90%;
 	margin: 0 auto;
 }
-@media screen and (min-width:1540px) {
+/* @media screen and (min-width:1540px) {
 	.container{max-width: 1480px;}
 }
 @media screen and (min-width:1280px) and ( max-width:1539px) {
 	.container{max-width: 1280px;}
-}
+} */
 @media screen and (min-width:768px) and ( max-width:1279px) {
-	.container{max-width: none;}
+	html{
+		font-size: 14px;
+	}
+	.container{
+		max-width: none;
+	}
 }
 .is_sp{display: none;}
 .is_tab{display: none;}
@@ -85,6 +94,77 @@ section,
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top01 .video_wrap{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.top01 .video_wrap::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.top01 .video_wrap #video01{
+	max-width: 100%;
+	z-index: -1;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{
+	margin-top: -2rem;
+	background: #000;
+	text-align: center;
+	padding: 6rem 0;
+}
+.top02 .box{
+	width: 80%;
+	margin: 0 auto;
+}
+.top02 h2{
+	margin-bottom: 3rem;
+}
+.top02 p{
+	line-height: 2.5;
+}
+.top02 .youtube{
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	margin-top: 5rem;
+}
+.top02 .youtube iframe{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%!important;
+	height: 100%!important;
+}
+.top02 figcaption{
+	font-size: 0.8rem;
+	text-align: right;
+}
+.top02 .txt{
+	text-align: left;
+	margin: 1rem 0 4rem;
+}
+.top02 .waku{
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #040000;
+	background: #f6c900;
+	padding: 0.2rem 0.5rem;
+}
+.top02 .waku span{
+	font-size: 1rem;
+	vertical-align: super;
+	margin-right: 1.5rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
