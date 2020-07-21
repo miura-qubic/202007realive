@@ -91,4 +91,16 @@ $(function () {
 	});
 
 
+	
+	
+});
+$(window).on('load scroll', function () {
+	$('.fadein').each(function () {
+		let elemOffset01 = $(this).offset().top;
+		let scrollPos = $(window).scrollTop();
+		let wh = $(window).height();
+			if (scrollPos > elemOffset01 - wh + (wh / 2) - 500) {
+			$(this).addClass('active');
+		}
+	});
 });
