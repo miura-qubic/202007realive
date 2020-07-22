@@ -403,7 +403,7 @@ footer .copyright{
 	left:0;
 	right: 0;
 	bottom: 0;
-	margin: 0 auto;
+	margin: 6rem auto 0;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -570,7 +570,7 @@ footer .copyright{
 	left:0;
 	right: 0;
 	bottom: 0;
-	margin: 0 auto;
+	margin: 6rem auto 0;
 	text-align: center;
 	display: flex;
 	flex-direction: column;

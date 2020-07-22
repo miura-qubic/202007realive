@@ -13,6 +13,39 @@ const tabletwidth = 1025;
 		openMenu.classList.toggle('active');
 		Nav.classList.toggle('active');
 	});
+
+	// パララックス
+	var wh = window.innerHeight,
+	reg = 10;
+
+	window.addEventListener('load', update_window_size);
+	window.addEventListener('resize', update_window_size);
+	function update_window_size() {
+		wh = window.innerHeight;
+	}
+
+	var paraItems = document.querySelectorAll('.para-item');//対象
+	paraItems = Array.prototype.slice.call(paraItems, 0);
+
+	if (paraItems.length) {
+		parallax();
+		window.addEventListener('load', parallax);
+		window.addEventListener('resize', parallax);
+		window.addEventListener('scroll', parallax, { passive: true });
+	}
+
+	function parallax() {
+		paraItems.forEach(function (paraItem, i) {
+
+			paraItem.style.transform = '';
+			var nowpos = paraItem.getBoundingClientRect().top - wh,
+				myreg = paraItem.getAttribute('data-reg') ? Number(paraItem.getAttribute('data-reg')) : reg;
+			if (nowpos < 0) {
+				paraItem.style.transform = 'translate(0,' + (nowpos / myreg) + 'px)';
+			}
+
+		});
+	}
 }
 
 
@@ -119,6 +152,7 @@ $(function () {
 		var position = target.offset().top - headerHeight;
 		$('body,html').stop().animate({scrollTop:position}, 500);
 	});
+	
 });
 
 // フェードイン
