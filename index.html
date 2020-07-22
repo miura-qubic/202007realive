@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="css/desktop.css" media="screen and (min-width: 768px)">
 	<link rel="stylesheet" type="text/css" href="css/tab.css"
-		media="screen and (min-width: 769px) and (max-width: 1025px)">
+		media="screen and (min-width: 768px) and (max-width: 1025px)">
 	<link rel="stylesheet" type="text/css" href="css/smart.css" media="screen and (max-width: 767px)">
 	<script defer src="js/all.min.js"></script>
 	<!--[if lt IE 9]>
@@ -23,41 +23,46 @@
 <body>
 	<div id="wrapper">
 		<header>
-			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ PCナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ PCナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+			<div class="header_in">
+				<nav>
+					<ul>
+						<li><a href="#home">HOME</a></li>
+						<li><a href="#vrzone">VR ZONE</a></li>
+						<li><a href="#realive360">REALIVE360</a></li>
+						<li><a href="#guest">GUEST</a></li>
+						<li><a href="#service">SERVICE</a></li>
+					</ul>
+				</nav>
 
-			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ SPナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ SPナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-
-			<div class="menu_open is_sp" id="menu_open">
-				<span></span>
-				<span></span>
-				<span></span>
+				<div class="menu_open" id="menu_open">
+					<span></span>
+					<span></span>
+				</div>
 			</div>
-			
+
 		</header>
 		<main>
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<section class="top01">
+			<section class="top01" id="home">
 				<div class="video_wrap">
 					<video id="video01" src="./movies/top/mv.mp4" loop autoplay muted playsinline></video>
 
 					<div class="txt">
 						<div class="box">
-							<div class="img img01">
+							<div class="img img01 fade01">
 								<img src="./images/top/realive_logo.svg" alt="REALIVE360">
 							</div>
-							<span></span>
-							<div class="img img02">
+							<span class="fade02"></span>
+							<div class="img img02 fade03">
 								<img src="./images/top/fm802_logo.svg" alt="FM802 meet the music on the radio">
 							</div>
-							<div class="vr_zone_logo">
+							<div class="vr_zone_logo fade04">
 								<img src="./images/top/vr_zone_logo.png" alt="VR ZONE">
 							</div>
 						</div>
-						<p>
-							エンターテインメントに新たな可能性を。<br>
+						<p class="fadein02">
+							エンターテインメントに<br class="is_tab">新たな可能性を。<br>
 							踏み出そう、新しい時代へ。
 						</p>
 					</div>
@@ -68,15 +73,15 @@
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 			<section class="top02">
 				<div class="container">
-					<div class="box">
+					<div class="box" id="vrzone">
 						<h2 class="fadein"><img src="./images/top/realive360_logo.svg" alt="REALIVE 360 VR ZONE"></h2>
 						<p class="fadein">
-							ICTが音楽カルチャーの新たなカタチを生み出す。<br>
-							進化したVR技術が、ライブ会場に瞬間移動したかのような没入感を作り上げる。<br>
-							ライブの熱狂を、臨場感を、高揚感をいつでも、どこにいても味わおう。<br>
-							会場に行けなくても、ライブに参加できるスタイルは、新時代のスタンダードになるだろう。<br>
-							まだまだICTと音楽カルチャーの可能性は未知数。<br>
-							だからこそ、NTT西日本はFM802とタッグを組んだこのプロジェクトにより、<br>
+							ICTが音楽カルチャーの<br class="is_sp">新たなカタチを生み出す。<br>
+							進化したVR技術が、<br class="is_tab">ライブ会場に瞬間移動したかのような<br class="is_sp">没入感を作り上げる。<br>
+							ライブの熱狂を、臨場感を、高揚感を<br class="is_sp">いつでも、どこにいても味わおう。<br>
+							会場に行けなくても、<br class="is_sp">ライブに参加できるスタイルは、<br class="is_tab">新時代のスタンダードになるだろう。<br>
+							まだまだICTと音楽カルチャーの<br class="is_sp">可能性は未知数。<br>
+							だからこそ、NTT西日本は<br class="is_sp">FM802とタッグを組んだ<br class="is_tab">このプロジェクトにより、<br>
 							未来の文化を築き、さらに挑戦していく。
 						</p>
 	
@@ -89,7 +94,7 @@
 						</div>
 
 						<div class="waku fadein">
-							<p>【アプリダウンロード】<span class="notice">※</span>無料【コンテンツ視聴】無料<span class="notice">※</span></p>
+							<p>【アプリダウンロード】<span class="notice">※</span><br class="is_tab">無料【コンテンツ視聴】無料<span class="notice">※</span></p>
 						</div>
 
 						<div class="bnr fadein">
@@ -111,7 +116,7 @@
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<section class="top03">
+			<section class="top03" id="realive360">
 				<div class="outer">
 					<div class="img">
 						<img src="./images/top/top03_01.png">
@@ -134,14 +139,14 @@
 			<!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 			
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
-			<section class="top04">
+			<section class="top04" id="guest">
 				<div class="main_img fadein">
 					<img src="./images/top/top04_01.png" alt="韻シスト アーティスト写真">
 				</div>
 
 				<div class="box">
 					<div class="container">
-						<h2 class="fadein">第一弾 韻シスト 8月6日 ライブ配信決定！</h2>
+						<h2 class="fadein">第一弾 韻シスト <br class="is_tab">8月6日 ライブ配信決定！</h2>
 						<div class="waku_wrap fadein">
 							<div class="waku large">
 								<p>ARTIST</p>
@@ -152,87 +157,26 @@
 						</div>
 
 						<div class="item fadein">
-							<a class="inner">
+							<a class="inner inner01">
 								<div class="img">
 									<img class="objectCover" src="./images/top/top04_02.png" alt="韻シスト">
 								</div>
 								<h3>韻シスト</h3>
 							</a>
 
-							<div class="overlay_area">
-								<div class="overlay_box">
-									<div class="overlay_box_in">
-										<div class="img">
-											<img class="objectCover" src="./images/top/top04_02.png" alt="韻シスト">
-										</div>
-
-										<div class="txt">
-											<p>[演奏曲]</p>
-											<p>
-												PARTY SIX<br>
-												Don't leave me<br>
-												Don't worry<br>
-												DJ中島ヒロトとのトーク映像<span>（立体音響）</span>
-											</p>
-										</div>
-
-										<div class="txt small">
-											<p>韻シスト OFFICIAL SITE</p>
-											<a href="http://www.in-sist.com/" target="_blank">http://www.in-sist.com/</a>
-
-											<div class="period">
-												<p>[配信期間] 0月00日~ 0月00日</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<a class="inner">
+							<a class="inner inner01">
 								<div class="img">
 									<img class="objectCover" src="./images/top/top04_03.png" alt="DENIMS">
 								</div>
 								<h3>DENIMS</h3>
 							</a>
-
-							<div class="overlay_area">
-								<div class="overlay_box">
-									<div class="overlay_box_in">
-										<div class="img">
-											<img class="objectCover" src="./images/top/top04_03.png" alt="韻シスト">
-										</div>
-
-										<div class="txt">
-											<p>[演奏曲]</p>
-											<p>
-												カーテンコール<br>
-												Marching Band!!<br>
-												夜にとけて<br>
-												メンバートーク映像<span>（立体音響）</span>
-											</p>
-										</div>
-
-										<div class="txt small">
-											<p>DENIMS OFFICIAL SITE</p>
-											<a href="http://denim-s.jp/" target="_blank">http://denim-s.jp/</a>
-
-											<div class="period">
-												<p>[配信期間] 0月00日~ 0月00日</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
 						</div>
 
 						<div class="waku small fadein">
 							<p>第二弾アーティスト</p>
 						</div>
 						<div class="item fadein">
-							<div class="inner">
+							<div class="inner inner02">
 								<div class="img undecided">
 									<p>Coming Soon</p>
 									<!-- <img class="objectCover" src="./images/top/top04_02.png" alt="韻シスト"> -->
@@ -240,7 +184,7 @@
 								<!-- <h3>韻シスト</h3> -->
 							</div>
 
-							<div class="inner">
+							<div class="inner inner02">
 								<div class="img undecided">
 									<p>Coming Soon</p>
 									<!-- <img class="objectCover" src="./images/top/top04_03.png" alt="DENIMS"> -->
@@ -253,7 +197,7 @@
 							<p>第三弾アーティスト</p>
 						</div>
 						<div class="item fadein">
-							<div class="inner">
+							<div class="inner inner03">
 								<div class="img undecided">
 									<p>Coming Soon</p>
 									<!-- <img class="objectCover" src="./images/top/top04_02.png" alt="韻シスト"> -->
@@ -261,7 +205,7 @@
 								<!-- <h3>韻シスト</h3> -->
 							</div>
 
-							<div class="inner">
+							<div class="inner inner03">
 								<div class="img undecided">
 									<p>Coming Soon</p>
 									<!-- <img class="objectCover" src="./images/top/top04_03.png" alt="DENIMS"> -->
@@ -276,12 +220,12 @@
 							</div>
 
 							<div class="bnr fadein">
-								<div class="img">
+								<a href="https://itunes.apple.com/jp/app/id1485217593?mt=8" target="_blank">
 									<img src="./images/top/top02_bnr01.png" alt="Download on the App Store">
-								</div>
-								<div class="img">
+								</a>
+								<a href="https://itunes.apple.com/jp/app/id1485217593?mt=8" target="_blank">
 									<img src="./images/top/top02_bnr02.png" alt="Google Playで手に入れよう">
-								</div>
+								</a>
 							</div>
 	
 							<div class="txt fadein">
@@ -290,6 +234,66 @@
 									※アプリダウンロード前にREALIVE360の<a href="https://realive360.jp/terms.html" target="_blank">利用規約</a>をお読みください。
 								</p>
 							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="overlay_area overlay_area01">
+					<div class="overlay_box">
+						<div class="overlay_box_in">
+							<div class="img">
+								<img class="objectCover" src="./images/top/top04_02.png" alt="韻シスト">
+							</div>
+
+							<div class="txt">
+								<p>[演奏曲]</p>
+								<p>
+									PARTY SIX<br>
+									Don't leave me<br>
+									Don't worry<br>
+									DJ中島ヒロトとのトーク映像<span>（立体音響）</span>
+								</p>
+							</div>
+
+							<div class="txt small">
+								<p>韻シスト OFFICIAL SITE</p>
+								<a href="http://www.in-sist.com/" target="_blank">http://www.in-sist.com/</a>
+
+								<div class="period">
+									<p>[配信期間] 0月00日~ 0月00日</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="overlay_area overlay_area01">
+					<div class="overlay_box">
+						<div class="overlay_box_in">
+							<div class="img">
+								<img class="objectCover" src="./images/top/top04_03.png" alt="韻シスト">
+							</div>
+
+							<div class="txt">
+								<p>[演奏曲]</p>
+								<p>
+									カーテンコール<br>
+									Marching Band!!<br>
+									夜にとけて<br>
+									メンバートーク映像<span>（立体音響）</span>
+								</p>
+							</div>
+
+							<div class="txt small">
+								<p>DENIMS OFFICIAL SITE</p>
+								<a href="http://denim-s.jp/" target="_blank">http://denim-s.jp/</a>
+
+								<div class="period">
+									<p>[配信期間] 0月00日~ 0月00日</p>
+								</div>
+							</div>
+
 						</div>
 					</div>
 				</div>
@@ -303,23 +307,23 @@
 						<img src="./images/top/top03_01.png">
 					</div>
 
-					<div class="box fadein">
-						<div class="img">
+					<div class="box">
+						<div class="img fadein">
 							<img src="./images/top/top03_02.png">
 						</div>
 
-						<div class="waku bk">
+						<div class="waku bk fadein">
 							<a href="https://realive360.jp/" target="_blank">リアライブの詳しい内容はこちら！<span class="ancle"><i class="far fa-angle-right"></i></span></a>
 						</div>
 
-						<div class="bnr">
-							<div class="img">
+						<div class="bnr fadein">
+							<a href="https://itunes.apple.com/jp/app/id1485217593?mt=8" target="_blank">
 								<img src="./images/top/top02_bnr01.png" alt="Download on the App Store">
-							</div>
-							<div class="img">
+							</a>
+							<a href="https://play.google.com/store/apps/details?id=jp.realive360.player" target="_blank">
 								<img src="./images/top/top02_bnr02.png" alt="Google Playで手に入れよう">
 							</div>
-						</div>
+						</a>
 					</div>
 				</div>
 
@@ -335,7 +339,7 @@
 			<!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
 			<section class="top06">
 				<div class="container">
-					<div class="box fadein">
+					<div class="box fadein" id="service">
 						<h2><img src="./images/top/top06_01.png" alt="REALIVE360 SERVICE"></h2>
 					</div>
 				</div>
@@ -379,7 +383,7 @@
 				<div class="container">
 					<div class="box">
 						<div class="ttl fadein">
-							<h2>THE NAKAJIMA HIROTO SHOW 802 <br>RADIO MASTERSでも発信中！</h2>
+							<h2>THE NAKAJIMA HIROTO <br class="is_sp">SHOW 802 <br>RADIO MASTERSでも発信中！</h2>
 						</div>
 
 						<div class="img fadein">

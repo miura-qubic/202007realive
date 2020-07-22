@@ -73,12 +73,18 @@ $(function () {
 		}, 3000);
 	}
 
-
 	// アーティストをクリックしたらオーバーレイ表示
-	$('.top04 .inner').on('click', function(){
-		// var itemIndex = $(this).index();
-		$(this).next('.overlay_area').fadeIn();
-		$('body').addClass('active');
+	$('.top04 .inner01').on('click', function(){
+		var itemIndex = $(this).index();
+		$('.overlay_area01').eq(itemIndex).fadeIn();
+	});
+	$('.top04 .inner02').on('click', function(){
+		var itemIndex02 = $(this).index();
+		$('.overlay_area02').eq(itemIndex02).fadeIn();
+	});
+	$('.top04 .inner03').on('click', function(){
+		var itemIndex03 = $(this).index();
+		$('.overlay_area03').eq(itemIndex03).fadeIn();
 	});
 	// オーバーレイをクリックしたら閉じる
 	$('.overlay_area').on('click', function(){
@@ -91,11 +97,33 @@ $(function () {
 	});
 
 
-	
-	
+	$('header nav ul li a').click(function () {
+		$('.menu_open').removeClass('active');
+		$('header nav').removeClass('active');
+	});
+
+	// スムーススクロール 
+	var headerHeight = $('header').outerHeight();
+	var urlHash = location.hash;
+	if(urlHash) {
+		$('body,html').stop().scrollTop(0);
+		setTimeout(function(){
+				var target = $(urlHash);
+				var position = target.offset().top - headerHeight;
+				$('body,html').stop().animate({scrollTop:position}, 500);
+		}, 100);
+	}
+	$('a[href^="#"]').click(function() {
+		var href= $(this).attr("href");
+		var target = $(href);
+		var position = target.offset().top - headerHeight;
+		$('body,html').stop().animate({scrollTop:position}, 500);
+	});
 });
+
+// フェードイン
 $(window).on('load scroll', function () {
-	$('.fadein').each(function () {
+	$('.fadein, .fadein02, .fade01, .fade02, .fade03, .fade04, .top01 .video_wrap .txt .box').each(function () {
 		let elemOffset01 = $(this).offset().top;
 		let scrollPos = $(window).scrollTop();
 		let wh = $(window).height();
@@ -103,4 +131,5 @@ $(window).on('load scroll', function () {
 			$(this).addClass('active');
 		}
 	});
+
 });

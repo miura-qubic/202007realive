@@ -1,0 +1,29 @@
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top06{
+	padding: 6rem 0 3rem;
+}
+.top06 .box h2{
+	display: inline-block;
+	margin-bottom: 2rem;
+}
+.top06 .box02{
+	display: block;
+}
+.top06 .box02 .item{
+  border-bottom: solid 1px #fff;
+  padding: 3rem 0;
+}
+.top06 .box02 .item:last-of-type{
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.top06 .box02 .item:nth-of-type(-n+2) .img{
+  margin-top: -3.5rem;
+}
+.top06 .box02 .item p{
+  margin-top: 2rem;
+}
+.top06 .box02 .item:first-of-type p{
+	margin-top: -3rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ06 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
