@@ -61,9 +61,6 @@ section,
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-body.active{
-	overflow: hidden;
-}
 .waku{
 	display: inline-block;
 	background: #f6c900;
@@ -103,7 +100,8 @@ body.active{
 .bnr a:first-of-type{
 	margin-right: 0.75rem;
 }
-.slider{
+.slider,
+.slider02{
 	position: absolute;
 	width:100%;
 	height: 100%;
@@ -111,7 +109,8 @@ body.active{
 	left:0;
 	z-index: -1;
 }
-.slider li{
+.slider li,
+.slider02 li{
 	position: absolute;
 	top:0;
 	left:0;
@@ -119,10 +118,12 @@ body.active{
 	height: 100%;
 	opacity: 1;
 }
-.slider li:nth-of-type(1){
+.slider li:nth-of-type(1),
+.slider02 li:nth-of-type(1){
 	z-index: 10;
 }
-.slider li:nth-of-type(2){
+.slider li:nth-of-type(2),
+.slider02 li:nth-of-type(2){
 	z-index: 9;
 }
 .fadein{
@@ -133,7 +134,7 @@ body.active{
 .fadein02{
 	opacity: 0;
 	transform: translate(0,200px);
-	transition: 1.2s 3.6s;
+	transition: 1s 4.4s;
 }
 .fadein.active,
 .fadein02.active{
@@ -142,19 +143,19 @@ body.active{
 }
 .fade01{
 	opacity: 0;
-	transition: .3s;
+	transition: .6s .3s;
 }
 .fade02{
 	opacity: 0;
-	transition: .3s .9s;
+	transition: .9s 1.2s;
 }
 .fade03{
 	opacity: 0;
-	transition: .6s 1.5s;
+	transition: 1.2s 2.4s;
 }
 .fade04{
 	opacity: 0;
-	transition: .9s 2.4s;
+	transition: 1.5s 3.4s;
 }
 .fade01.active,
 .fade02.active,
@@ -224,14 +225,28 @@ header nav li a{
 footer{
 	padding: 1rem 2rem;
 }
+footer .container{
+	max-width: none;
+	padding: 0;
+}
+footer .box{
+	margin-top: 3rem;
+	text-align: center;
+}
 footer p{
 	font-size: 0.8rem;
 	line-height: 2;
 	text-align: center;
 }
 footer .copyright{
-	margin-top: 3rem;
 	font-size: 0.8rem;
+}
+footer .ad_number{
+	display: inline-block;
+	line-height: 1;
+	padding: 0.25rem 0.5rem;
+	border: solid 1px #fff;
+	margin-top: 1.5rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -288,9 +303,9 @@ footer .copyright{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	border: none;
+	border: solid 5px transparent;
 	padding: 1rem;
-	transition: .9s 2.4s;
+	transition: 1.5s 3.4s;
 }
 .top01 .video_wrap .txt .box.active{
 	border: solid 5px #fff;
@@ -484,7 +499,7 @@ footer .copyright{
 	height: 100%;
 	top: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 99999;
 	background: rgba(0, 0, 0, 0.5);
 }
 .top04 .overlay_box{
@@ -497,17 +512,25 @@ footer .copyright{
 	padding: 0 1rem;
 }
 .top04 .overlay_box_in{
+	position: relative;
 	overflow: scroll;
 	width: 100%;
 	height: auto;
 	max-height: 90%;
 	margin: 0 auto;
 	background: #000;
-	padding: 1.5rem;
+	padding: 2.5rem 1.5rem 1.5rem;
 	box-shadow: 0px 0px 5px 1px #ccc;
 	cursor: default;
 }
-.top04  .overlay_box_in .img img{
+.top04 .overlay_box_in .close_btn{
+	position: absolute;
+	top: 0.5rem;
+	right: 1rem;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+.top04 .overlay_box_in .img img{
 	width: 100%;
 }
 .top04 .overlay_box_in .img{
@@ -515,6 +538,7 @@ footer .copyright{
 }
 .top04 .overlay_box_in .txt p{
 	font-size: 1rem;
+	font-weight: bold;
 }
 .top04 .overlay_box_in .txt p span{
 	font-size: 0.8rem;
@@ -532,7 +556,7 @@ footer .copyright{
 }
 .top04 .overlay_box_in .txt .period p{
 	color: #040000;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	font-weight: bold;
 	text-align: center;
 	padding: 0.25rem 0.5rem;
@@ -542,6 +566,7 @@ footer .copyright{
 }
 .top04 .box02 .txt p{
 	font-size: 1rem;
+	font-weight: bold;
 }
 .top04 .box02 .txt p a{
 	display: inline;
@@ -634,6 +659,10 @@ footer .copyright{
 	display: inline;
 	background: #f6c900;
 	padding: 0.25rem 0.5rem;
+}
+.top07 .box .img02{
+	display: block;
+	margin-top: 5rem;
 }
 .top07 .box .notice_wrap{
 	text-align: center;

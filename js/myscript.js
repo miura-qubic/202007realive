@@ -11,12 +11,14 @@ const tabletwidth = 1025;
 
 	openMenu.addEventListener('click', function () {
 		openMenu.classList.toggle('active');
-		Nav.classList.toggle('active');
+		if(w < spwidth){
+			Nav.classList.toggle('active');
+		}
 	});
 
 	// パララックス
 	var wh = window.innerHeight,
-	reg = 10;
+	reg = 9;
 
 	window.addEventListener('load', update_window_size);
 	window.addEventListener('resize', update_window_size);
@@ -81,6 +83,34 @@ $(function () {
 		
 	}, 3500);
 
+	$('.slider02 li').eq(0).css({
+		'z-index': 10,
+	});
+	$('.slider02 li').eq(0).animate({
+		'opacity': 0
+	}, 1500);
+
+	$('.slider02 li').eq(1).css('z-index', 9);
+
+	let clone02 = $('.slider02 li').eq(0).clone();
+
+	$('.slider02 ul').append(clone02);
+	$('.slider02 li').eq(2).css({
+		'z-index': 8,
+		'opacity': 1
+	});
+
+	setTimeout(function () {
+		$('.slider02 li').eq(0).remove();
+	}, 3000);
+
+
+	setInterval(function () {
+
+		sliderAnim02();
+		
+	}, 3500);
+
 
 	let sliderAnim = function () {
 
@@ -106,6 +136,30 @@ $(function () {
 		}, 3000);
 	}
 
+	let sliderAnim02 = function () {
+
+		$('.slider02 li').eq(0).css({
+			'z-index': 10,
+		});
+		$('.slider02 li').eq(0).animate({
+			'opacity': 0
+		}, 1500);
+
+		$('.slider02 li').eq(1).css('z-index', 9);
+
+		let clone = $('.slider02 li').eq(0).clone();
+
+		$('.slider02 ul').append(clone);
+		$('.slider02 li').eq(2).css({
+			'z-index': 8,
+			'opacity': 1
+		});
+
+		setTimeout(function () {
+			$('.slider02 li').eq(0).remove();
+		}, 3000);
+	}
+
 	// アーティストをクリックしたらオーバーレイ表示
 	$('.top04 .inner01').on('click', function(){
 		var itemIndex = $(this).index();
@@ -120,19 +174,39 @@ $(function () {
 		$('.overlay_area03').eq(itemIndex03).fadeIn();
 	});
 	// オーバーレイをクリックしたら閉じる
-	$('.overlay_area').on('click', function(){
-		$(this).fadeOut();
-		$('body').removeClass('active');
-	});
-	// オーバーレイの中のコンテンツをクリック時は閉じない
-	$('.overlay_box_in').on('click', function(e){
-		e.stopPropagation();
-	});
+	if(w > spwidth){
+		$('.overlay_area').on('click', function(){
+			$(this).fadeOut();
+		});
+		// オーバーレイの中のコンテンツをクリック時は閉じない
+		$('.overlay_box_in').on('click', function(e){
+			e.stopPropagation();
+		});
+	}else{
+		$('.top04 .overlay_area .close_btn').on('click', function(){
+			$('.overlay_area').fadeOut();
+		});
+	}
 
 
 	$('header nav ul li a').click(function () {
 		$('.menu_open').removeClass('active');
-		$('header nav').removeClass('active');
+		if(w > spwidth){
+			$('header nav').removeClass('active').hide();
+		}else{
+			$('header nav').removeClass('active');
+		}
+	});
+
+	$('.menu_open').on('click', function(){
+		if(w > spwidth){
+			$('header nav').slideToggle('fast');
+			if($('header nav').hasClass('active')){
+				$('header nav').removeClass('active');
+			}else{
+				$('header nav').addClass('active');
+			}
+		}
 	});
 
 	// スムーススクロール 
