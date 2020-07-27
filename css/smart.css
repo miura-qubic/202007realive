@@ -10,7 +10,6 @@ html{
 	font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
 	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
-	/* font-family: san-serif; */
 	-webkit-text-size-adjust: 100%;
 }
 a{
@@ -19,7 +18,7 @@ a{
 #wrapper{
 	width: 100%;
 	height: 100%;
-	margin-top: 4rem;
+	/* margin-top: 4rem; */
 }
 section,
 .section{
@@ -172,11 +171,15 @@ header{
 	left: 0;
 	width: 100%;
 	height: 4rem;
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(207, 145, 145, 0);
 	z-index: 55000;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	transition: .3s;
+}
+header.active{
+	background: rgba(0, 0, 0, 0.9);
 }
 header nav{
 	position: absolute;
@@ -253,13 +256,14 @@ footer .ad_number{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top01{
 	height: 60vh;
-	background: #000;
+	/* background: #000; */
 }
 .top01 .video_wrap{
 	position: relative;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	text-align: center;
 }
 .top01 .video_wrap::before{
 	position: absolute;
@@ -269,7 +273,7 @@ footer .ad_number{
 	top: 0;
 	left: 0;
 	background: url(../images/top/bg.png) center center / cover no-repeat;
-	z-index: 2;
+	z-index: 6;
 }
 .top01 .video_wrap::after{
 	position: absolute;
@@ -282,11 +286,13 @@ footer .ad_number{
 	z-index: 3;
 }
 .top01 .video_wrap #video01{
-	/* max-width: 100%; */
-	width: 100%;
+	position: absolute;
 	height: 100%;
-	object-fit: cover;
-	z-index: -1;
+	width: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 4;
 }
 .top01 .video_wrap .txt{
 	position: absolute;
@@ -295,7 +301,7 @@ footer .ad_number{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 80%;
-	z-index: 4;
+	z-index: 10;
 }
 .top01 .video_wrap .txt .box{
 	position: relative;
@@ -446,7 +452,7 @@ footer .ad_number{
 	margin-top: 3rem;
 }
 .top04 .box h2{
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	margin-bottom: 2rem;
 }
 .top04 .box .waku_wrap{

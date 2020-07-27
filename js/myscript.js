@@ -18,7 +18,7 @@ const tabletwidth = 1025;
 
 	// パララックス
 	var wh = window.innerHeight,
-	reg = 9;
+	reg = 6;
 
 	window.addEventListener('load', update_window_size);
 	window.addEventListener('resize', update_window_size);
@@ -54,6 +54,14 @@ const tabletwidth = 1025;
 $(function () {
 
 	// JQueryの範囲
+
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > 500) {
+			$('header').addClass('active');
+		} else {
+			$('header').removeClass('active');
+		}
+	});
 
 	$('.slider li').eq(0).css({
 		'z-index': 10,
