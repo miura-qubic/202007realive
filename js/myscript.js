@@ -234,6 +234,17 @@ $(function () {
 		var position = target.offset().top - headerHeight;
 		$('body,html').stop().animate({scrollTop:position}, 500);
 	});
+
+	$('.JS_ScrollItem').each(function(){
+		let $item = $(this);
+		$(window).on('load scroll', function(){
+			let top = $item.offset().top; // ターゲットの位置取得
+			let position = top - $(window).height();  // イベントを発火させたい位置
+			if($(window).scrollTop() > position){
+				$item.addClass('isShow');
+			}
+		});
+	});
 	
 });
 
